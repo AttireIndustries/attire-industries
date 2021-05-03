@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_Rbi5I3dH8jtaWdc7d1f1M');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_pdo6mrr', 'template_3fvsxpl', '#contact-form')
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <!--<img class = "logo" src="imgs/attire-logo.png" alt="Attire Industries">-->
+        <p  class="logo-text"><a href="#" >Attire</a></p>
+        <nav>
+            <ul class="navigation">
+                <li class="navigation-sub"><a href="../index.html">Home</a></li>
+                <div class="dropdown">
+                    <button class="dropbtn">Products</button>
+                    <div class="dropdown-content">
+                      <a href="#">All</a>
+                      <a href="#">Men</a>
+                      <a href="#">Women</a>
+                    </div>
+                  </div>
+                <li class="navigation-sub"><a href="About-Us.html">About Us</a></li>
+                <li class="navigation-sub"><a href="Contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contact-forms">
+        <form id="contact-form" >
+            <input type="hidden" name="contact_number">
+            <label>Name</label>
+            <input type="text" name="user_name" required>
+            <label>Email</label>
+            <input type="email" name="user_email" required>
+            <label>Message</label>
+            <textarea name="message" required></textarea>
+            <input class="submit-form" type="submit" method="POST" value="Send">
+        </form>
+    </div>
+
+    <footer>
+        <p id = "contact"class="contact">Contact Us</p>
+        <div class="contact-links">
+            <a class = "email" href="mailto:attireindustries@gmail.com">attireindustries@gmail.com</a>
+        <p class="phone">Phone: <strong>+923127269946</strong></p>
+        </div>
+        <div class="social-links">
+            <a class="social-link" href="#"><img src="../imgs/Icons/facebookIcon.png"  alt="facebook.com"></a>
+            <a class="social-link" href="#"><img src="../imgs/Icons/TwitterIcon.png"  alt="twitter.com"></a>
+        </div>
+    </footer>
+    <div class="copywrites">
+        
+    </div>
+</body>
+</html>
