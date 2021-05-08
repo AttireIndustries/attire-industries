@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Attire Industries</title>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Attire Insudtries</title>
-    <link rel="icon" href="https://scontent.flhe2-2.fna.fbcdn.net/v/t1.6435-9/179849221_106959401549285_6102753821317344715_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeE1IPg3jnZp90EunignLb617J95C0omWprsn3kLSiZampx_Nlo-wmDh_HttJToxohgPOMrnBPWrfQg1AqzHodl7&_nc_ohc=d3CbYMqd5AUAX9Sae9H&_nc_ht=scontent.flhe2-2.fna&oh=8c2252b137f7a2d5c8d42e427621fd7c&oe=60BBBDD1" type="image/x-icon">
+    <title>Document</title>
     <link rel="stylesheet" href="../../styles/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Oswald:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://scontent.flhe2-2.fna.fbcdn.net/v/t1.6435-9/179849221_106959401549285_6102753821317344715_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeE1IPg3jnZp90EunignLb617J95C0omWprsn3kLSiZampx_Nlo-wmDh_HttJToxohgPOMrnBPWrfQg1AqzHodl7&_nc_ohc=d3CbYMqd5AUAX9Sae9H&_nc_ht=scontent.flhe2-2.fna&oh=8c2252b137f7a2d5c8d42e427621fd7c&oe=60BBBDD1" type="image/x-icon">
+
 </head>
 <body>
     <header>
@@ -18,20 +21,35 @@
         <nav>
             <ul class="navigation">
                 <li class="navigation-sub"><a href="../../index.html">Home</a></li>
-                <li class="navigation-sub"><a href="../product.html">Products</a></li>
-                <li class="navigation-sub"><a href="../About-Us.html">About Us</a></li>
-                <li class="navigation-sub"><a href="#contact">Contact Us</a></li>
+                <div class="dropdown">
+                    <button class="dropbtn">Products</button>
+                    <div class="dropdown-content">
+                      <a href="../product.html">All</a>
+                      <a href="./men.html">Men</a>
+                      <a href="./women.html">Women</a>
+                      <a href="./caps.html">Caps</a>
+                    </div>
+                  </div>                
+                  <li class="navigation-sub"><a href="../About-Us.html">About Us</a></li>
+                <li class="navigation-sub"><a href="../Contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="product-details">
-        <img src="../../imgs/Clothes/attire (1).jpeg" alt="">
-        <div class="detail-test">
-            <h2>product 1</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    <div class="product-folio">
+        <div class="folio__item">
+            <a target="_blank" href="../product-details/product-1.html"><img class="folio__img" src="../../imgs/Clothes/attire (1).jpeg" alt=""></a>
         </div>
+        <div class="folio__item">
+            <a target="_blank" href="../product-details/product-1.html"><img class="folio__img" src="../../imgs/Clothes/attire (1).jpeg" alt=""></a>
+        </div>
+        <div class="folio__item">
+            <a target="_blank" href="../product-details/product-1.html"><img class="folio__img" src="../../imgs/Clothes/attire (1).jpeg" alt=""></a>
+        </div>
+        
+        
     </div>
+    
     
     <footer>
         <p id = "contact"class="contact">Contact Us</p>
