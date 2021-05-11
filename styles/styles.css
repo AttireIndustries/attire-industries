@@ -328,7 +328,7 @@ footer{
     display: block;
   }
   
-  .slide:nth-of-type(1) {
+  /*.slide:nth-of-type(1) {
     background: #D7A151;
   }
   
@@ -345,7 +345,7 @@ footer{
     background: #D1D1D4;
 
   }
-  
+  */
   .slide_buttons {
     left: 0;
     position: absolute;
