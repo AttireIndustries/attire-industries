@@ -220,10 +220,27 @@ footer{
 .copywrites{
     text-align: center;
 }
+.home-content{
+  margin: 2rem;
+}
+.home-content_child{
+  display: flex;
+  flex-flow: row nowrap;
+}
+.home-content_child img, .home-content_child p{
+  display: block;
+  margin: 1rem 0;
+}
+.home-content_child img{
+  width: 250px;
+}
 @media (max-width : 600px) {
     .product-details{
         flex-flow: column nowrap;
         justify-content: center;
+    }
+    .home-content_child{
+      flex-flow: column nowrap;
     }
 }
 
